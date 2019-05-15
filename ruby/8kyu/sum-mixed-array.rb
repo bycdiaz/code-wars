@@ -4,7 +4,7 @@
 
 def sum_mix(x)
   integer_array = x.map { |item| item.to_i}
-  integer_array.reduce { |sum, number| sum + number }
+  integer_array.reduce { |sum, number| sum + number.to_i }
 end
 
 p sum_mix(['5', '0', 9, 3, 2, 1, '9', 6, 7])
