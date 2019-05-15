@@ -12,6 +12,11 @@
 # refactored
 def zip (first, second) (first + second).sort end
 
+# actual solution
+def zip first, second
+  first.zip(second).flatten
+end
+
 first = ['a', 'c', 'e']
 second = ['b', 'd', 'f']
 p zip(first, second)
