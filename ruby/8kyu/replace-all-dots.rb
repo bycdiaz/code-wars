@@ -10,5 +10,5 @@
 # String str will never be null.
 
 def replaceDots(str)
-  str.gsub(/[.]/, '-')
+  str.gsub(".", '-')
 end
