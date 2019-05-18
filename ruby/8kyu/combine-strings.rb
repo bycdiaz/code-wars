@@ -11,5 +11,5 @@
 # 'James Stevens'
 
 def combine_names(string1,string2)
-
+"#{string1} #{string2}"
 end
