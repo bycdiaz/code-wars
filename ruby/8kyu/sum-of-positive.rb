@@ -4,6 +4,7 @@
 
 # Note: if there is nothing to sum, the sum is default to 0.
 
+
 # my initial solution
 def positive_sum(arr)
   if arr.length > 0
