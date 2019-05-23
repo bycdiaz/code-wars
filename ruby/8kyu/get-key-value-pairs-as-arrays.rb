@@ -5,9 +5,20 @@
 
 # keysAndValues({a: 1, b: 2, c: 3}) # should return [[:a, :b, :c], [1, 2, 3]]
 
+# my initial solution
+# def keysAndValues(data)
+#   keys = []
+#   values = []
+#   data.map { |k,v|
+#     keys << k
+#     values << v
+#   }
+#   full_array = keys,values
+# end
+
+# refactored
 def keysAndValues(data)
-  keys = []
-  values = []
+  keys,values = [],[]
   data.map { |k,v|
     keys << k
     values << v
