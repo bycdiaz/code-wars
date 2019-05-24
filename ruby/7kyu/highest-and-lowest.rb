@@ -14,7 +14,6 @@
 # number is first.
 
 def high_and_low(numbers)
-  new_array = []
   new_array = numbers.split(" ").map{ |num|
     num.to_i
   }.sort
