@@ -22,10 +22,14 @@
 
 # true if Arthur need to invite more women, false otherwise.
 
+# original solution
 def invite_more_women(arr)
-  arr.empty? ? false :
+  if arr.empty?
+    false
+  else
     number = arr.inject(:+)
     number > 0
+  end
 end
 
 p invite_more_women([])
