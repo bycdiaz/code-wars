@@ -20,7 +20,6 @@
 # return -14
 
 def adjacent_element_product(array)
-  array.length
   products = []
   (array.length - 1).times { |num|
     products << array[num] * array[num+1]
