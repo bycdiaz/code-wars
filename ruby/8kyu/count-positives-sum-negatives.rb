@@ -9,8 +9,11 @@
 # For input [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, -11, -12, -13, -14, -15], you 
 # should return [10, -65].
 
+# my initial solution
 def count_positives_sum_negatives(lst)
-  if lst
+  if lst == []
+    []
+  else
     positives = []
     negatives = []
     lst.each { |num|
@@ -36,8 +39,6 @@ def count_positives_sum_negatives(lst)
     new_array[0] = positives
     new_array[1] = negatives
     new_array
-  else
-    []
   end
 end
 
