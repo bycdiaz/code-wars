@@ -15,11 +15,12 @@ def no_boring_zeros(num)
     num
   else
     stringed_num = num.to_s
-    if stringed_num.end_with?("0")
-      stringed_num = stringed_num.delete("0")
-      stringed_num.to_i
+    while stringed_num.end_with?("0")
+      stringed_num = stringed_num.chop
     end
+    stringed_num.to_i
   end
 end
+
 
 p no_boring_zeros(1450)
