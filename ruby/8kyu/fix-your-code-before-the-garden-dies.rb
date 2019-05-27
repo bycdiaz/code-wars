@@ -5,13 +5,19 @@
 
 # Your task is to debug the code before your plants die!
 
+# initial solution
 def rain_amount(mm)
-  if (mm == 40)
-    "Your plant has had more than enough water for today!"
+  if (mm < 40)
+    "You need to give your plant #{40 - mm}mm of water"
   else
-    "You need to give your plant #{mm - 40}mm of water"
+    "Your plant has had more than enough water for today!"
   end
 end
 
-p rain_amount(100)
+# refactored
+def rain_amount(mm)
+  mm < 40 ? "You need to give your plant #{40 - mm}mm of water" : "Your plant has had more than enough water for today!"
+end
+
+p rain_amount(0)
 # "Your plant has had more than enough water for today!"
