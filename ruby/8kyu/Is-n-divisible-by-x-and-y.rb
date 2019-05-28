@@ -7,7 +7,14 @@
 # is_divisible(100,5,3)--> false because 100 is not divisible by 3
 # is_divisible(12,7,5)--> false because 12 is neither divisible by 7 nor 5
 
-# my initial solution
+# my initial attempt
+# def is_divisible(n,x,y)
+#   if (n % x == 0) && (n % y == 0)
+#     true
+#   end
+# end
+
+# actual solution
 def is_divisible(n,x,y)
   (n % x == 0) && (n % y == 0)
 end
