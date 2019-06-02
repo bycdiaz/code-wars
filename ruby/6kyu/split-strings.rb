@@ -2,17 +2,24 @@
 # If the string contains an odd number of characters then it should replace the 
 # missing second character of the final pair with an underscore ('_').
 
+# my solution
+# def solution(str)
+#   str_array = str.split("")
+#   if (str_array.length).odd?
+#     split_array = str_array.each_slice(2).to_a
+#     split_array = split_array.map { |array| array.join("")}
+#     split_array[1][0] = split_array[1][0].concat("_")
+#     split_array
+#   else
+#     split_array = str_array.each_slice(2).to_a
+#     split_array = split_array.map { |array| array.join("")}
+#   end
+# end
+
+# concise solution from codewars
 def solution(str)
-  str_array = str.split("")
-  if (str_array.length).odd?
-    split_array = str_array.each_slice(2).to_a
-    split_array = split_array.map { |array| array.join("")}
-    split_array[1][0] = split_array[1][0].concat("_")
-    split_array
-  else
-    split_array = str_array.each_slice(2).to_a
-    split_array = split_array.map { |array| array.join("")}
-  end
+  str << "_" if str.length % 2 != 0
+  str.chars.each_slice(2).map(&:join)
 end
 
 # Examples:
