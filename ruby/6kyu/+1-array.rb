@@ -12,18 +12,31 @@
 # [4, 3, 2, 5] would return [4, 3, 2, 6]
 
 # my initial solution
+# def up_array(arr)
+#   if arr.any? { |item| item < 0}
+#     nil
+#   elsif arr.empty?
+#     nil
+#   elsif arr.any? { |item| item > 9}
+#     nil
+#   else
+#     arr_plus_one = (arr.join("").to_i) + 1
+#     split_arr_plus_one = arr_plus_one.to_s.split("")
+#     split_arr_plus_one.map{ |item|
+#       item.to_i
+#     }
+#   end
+# end
+
+# refactored
 def up_array(arr)
-  if arr.any? { |item| item < 0}
-    nil
-  elsif arr.empty?
-    nil
-  elsif arr.any? { |item| item > 9}
+  if (arr.any? { |item| item < 0}) || (arr.empty?) || (arr.any? { |item| item > 9})
     nil
   else
     arr_plus_one = (arr.join("").to_i) + 1
     split_arr_plus_one = arr_plus_one.to_s.split("")
     split_arr_plus_one.map{ |item|
-      item.to_i
+    item.to_i
     }
   end
 end
