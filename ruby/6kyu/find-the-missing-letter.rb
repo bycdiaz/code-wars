@@ -21,16 +21,18 @@ def find_missing_letter(arr)
   end
 end
 
+# top solution from codewars (currently face palming)
+def find_missing_letter(arr)
+  ((arr.first..arr.last).to_a - arr).first
+end
+
 # refactored (looks terrible, difficult to read)
 def find_missing_letter(arr)
   upper_alpha, lower_alpha = ("A".."Z").to_a, ("a".."z").to_a
   arr.any?(/[[:lower:]]/) ? ((lower_alpha[lower_alpha.index(arr[0])..lower_alpha.index(arr[-1])]) - arr).join : ((upper_alpha[upper_alpha.index(arr[0])..upper_alpha.index(arr[-1])]) - arr).join
 end
 
-# top solution from codewars (currently face palming)
-def find_missing_letter(arr)
-  ((arr.first..arr.last).to_a - arr).first
-end
+
 
 # p find_missing_letter(["a","b","c","d","f"])
 p find_missing_letter(["O","Q","R","S"])
