@@ -15,12 +15,15 @@
 # Also, your function will always get an array or a list, you don't have to check for null, 
 # undefined or similar.
 
+# my initial solution
 def min_max(lst)
   min_max = []
   min_max << lst.min
   min_max << lst.max
   min_max
 end
+
+# top solution from codewars
 
 p min_max([1,2,3,4,5])
 # should return [1,5]
