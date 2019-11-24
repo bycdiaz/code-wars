@@ -14,27 +14,20 @@
 // NOTE: this is indexed from [1..n] (not zero indexed!)
 
 function vowelIndices(word){
-  let vowels = ['a','e','i','o','u','y'];
+  const vowels = ['a','e','i','o','u','y'];
 
-  let wordLetters = word.toLowerCase().split("");
+  const wordArray = word.toLowerCase().split("");
 
-  let indexes = []
+  const indexes = []
 
-  for (i = 0; i < wordLetters.length; i++) {
-    if (vowels.includes(wordLetters[i])) {
-      indexes.push(i + 1);
-    }
-  }
-
+  wordArray.forEach( function(letter,index) {
+    if (vowels.includes(letter)) {
+      indexes.push(index + 1);
+    };
+  });
+  
   return indexes;
 }
-
-console.log(vowelIndices("ERNfYWpczZHZp"));
-
-
-// expected output: "a"
-// expected output: "b"
-// expected output: "c"
 
 // console.log(vowelIndices("mmm"));
 // []
