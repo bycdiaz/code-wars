@@ -1,8 +1,8 @@
 // add the value "codewars" to the websites array 1,000 times
-var websites = []
+const websites = [];
 
-for (let index = 0; index < 1000; index++) {
-  websites.push("codewars")  
+for (let index = 0; index < 1000; index += 1) {
+  websites.push('codewars');
 }
 
-console.log(websites.length);
+websites.length;
