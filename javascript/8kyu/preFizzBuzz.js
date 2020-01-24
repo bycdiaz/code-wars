@@ -5,10 +5,9 @@
 // Your job is to write an algorithm that gets you from the input to the output.
 
 function preFizz(n) {
-
-  const result = []
-  for (let i = n; i < n; i++) {
-    result.push(i)
+  const result = [];
+  for (let i = 1; i <= n; i++) {
+    result.push(i);
   }
 
   return result;
