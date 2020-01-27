@@ -27,7 +27,7 @@ function absentVowel(string) {
   return result;
 }
 
-// console.log(absentVowel('John Doe hs seven red pples under his bsket'));
+absentVowel('John Doe hs seven red pples under his bsket');
 // 0  ; missing: "a"
 // console.log(absentVowel('Bb Smith sent us six neatly arranged range bicycles'));
 // 3  ; missing: "o"
