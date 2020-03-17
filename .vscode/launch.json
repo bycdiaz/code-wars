@@ -8,10 +8,10 @@
       "type": "node",
       "request": "launch",
       "name": "Launch Program",
-      "program": "${workspaceFolder}/code-wars/8kyu/sum-positives/sum-positives.js"
+      "skipFiles": [
+        "<node_internals>/**"
+      ],
+      "program": "${workspaceFolder}/javascript/7kyu/middleCharacter.js"
     }
-  ],
-  "rules": {
-    "no-console": "off"
-  }
+  ]
 }
