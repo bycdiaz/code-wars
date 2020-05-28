@@ -6,13 +6,15 @@
 // they exist in the array. Array will never be empty and n > 0 always.
 
 function longest(arr, n) {
-  const words = [];
-  arr.forEach((word, index) => words.push({ word, index, length: word.length }));
+  const wordStats = [];
+  arr.forEach((word, index) => wordStats.push({ word, index, length: word.length }));
 
-  return words.sort((a, b) => {
-    a.length > b.length ? -1 : 1;
-    a.index > b.index ? 1 : -1;
-  })[n-2].word;
+  return wordStats.sort((a, b) => {
+    if (a.length > b.length) return -1
+    if (a.length < b.length) return 1;
+    if (a.index > b.index) return 1;
+    if (a.index < b.index) return -1;
+  })[n-1].word;
 }
 
 console.log(longest(['Hello','World','Codewars','Katas'],3));
