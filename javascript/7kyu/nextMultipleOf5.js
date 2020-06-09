@@ -17,6 +17,7 @@
 
 // You can assume that all inputs are valid integers.
 
+// with for loop
 function roundToNext5(n){
   function loopUntilTarget(n) {
     for (let i = n; i < n + 5; i += 1) {
@@ -25,6 +26,13 @@ function roundToNext5(n){
   }
 
   return n % 5 == 0 ? n : loopUntilTarget(n);
+}
+
+// with while loop
+function roundToNext5(n){
+  if (n % 5 == 0) return n;
+  while (n % 5 != 0) n += 1;
+  return n;
 }
 
 console.log(roundToNext5(0));
