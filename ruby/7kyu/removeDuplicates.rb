@@ -12,9 +12,7 @@
 def unique(integers)
   unique = []
 
-  integers.each do |integer|
-    unique << integer if !unique.include?(integer)
-  end
+  integers.each { |integer| unique << integer if !unique.include?(integer) }
 
   unique
 end
