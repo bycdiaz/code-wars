@@ -14,7 +14,7 @@ function swap(str){
 
   return str.split('').map(char => {
     if (char === char.toUpperCase()) {
-      return char = char.toLowerCase()
+      return char = char.toLowerCase();
     } else {
       return char = char.toUpperCase();
     }
