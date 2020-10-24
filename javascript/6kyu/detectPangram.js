@@ -5,13 +5,28 @@
 // Given a string, detect whether or not it is a pangram. Return True if it is, False if not.
 // Ignore numbers and punctuation.
 
+// initial solution
+// function isPangram(string) {
+//   const alphabet = "abcdefghijklmnopqrstuvwxyz".split("");
+//   return alphabet.every((letter) => string.toLowerCase().includes(letter));
+// }
+
+function getUniqueLetters(string) {
+  const isLetter = letter => /[a-z]/.test(letter);
+  const onlyLetters = string.toLowerCase().split('').filter(isLetter);
+
+  return new Set(onlyLetters);
+}
+
 function isPangram(string) {
-  const alphabet = "abcdefghijklmnopqrstuvwxyz".split("");
-  return alphabet.every((letter) => string.toLowerCase().includes(letter));
+  const lettersInAlphabet = 26;
+  const uniqueLetters = getUniqueLetters(string);
+
+  return uniqueLetters.size === lettersInAlphabet;
 }
 
 console.log(isPangram("The quick brown fox jumps over the lazy dog."));
 // true
 
-// console.log(isPangram("This is not a pangram."));
+console.log(isPangram("This is not a pangram."));
 // false
