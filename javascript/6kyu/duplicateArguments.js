@@ -5,13 +5,22 @@
 // The array values passed in will only be strings or numbers. The
 // only valid return values are true and false.
 
-function solution(...args){
-  const count = {};
-  const moreThanOne = (value) => value > 1;
+// initial solution
+// function solution(...args){
+//   const count = {};
+//   const moreThanOne = (value) => value > 1;
   
-  args.forEach(arg => {count[arg] ? count[arg] += 1 : count[arg] = 1})
-  return Object.values(count).some(moreThanOne);
- }
+//   args.forEach(arg => {count[arg] ? count[arg] += 1 : count[arg] = 1})
+//   return Object.values(count).some(moreThanOne);
+// }
+
+// different approach
+function solution(...args){
+  const numberOfArguments = args.length;
+  const numberOfUniqueArguments = new Set(args).size;
+  
+  return numberOfArguments !== numberOfUniqueArguments
+}
 
 console.log(solution(1, 2, 3));
 // false
