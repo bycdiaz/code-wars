@@ -49,9 +49,9 @@ function getNextLetter(currentLetter) {
 function lastSurvivors(str) {
   const lettersCount = getLettersCount(str);
   const greaterThanOrEqualToTwo = (number) => number >= 2;
-  let allCountsTwoOrGreater = Object.values(lettersCount).some(greaterThanOrEqualToTwo);
+  let someCountsTwoOrGreater = Object.values(lettersCount).some(greaterThanOrEqualToTwo);
 
-  while (allCountsTwoOrGreater) {
+  while (someCountsTwoOrGreater) {
     for (const letter in lettersCount) {
       const currentLetterCount = lettersCount[letter];
 
@@ -63,7 +63,7 @@ function lastSurvivors(str) {
       }
     }
 
-    allCountsTwoOrGreater = Object.values(lettersCount).some(greaterThanOrEqualToTwo);
+    someCountsTwoOrGreater = Object.values(lettersCount).some(greaterThanOrEqualToTwo);
   }
 
   return Object.entries(lettersCount).reduce((resultString, entry) => {
